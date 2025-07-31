@@ -4,7 +4,7 @@ body, html {
     }
 
     .hero {
-      background-image: url('/assets/img/hero-img.png');
+      background-image: url('/assets/img/hero-img.webp');
       background-size: cover;
       background-position: center;
       height: 680px;
