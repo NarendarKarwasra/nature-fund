@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,69 +17,76 @@
 </head>
 
 <style>
-    .about-hero {
-  position: relative;
-  height: 350px;
-  padding-top: 30px;
-  background-image: url('/assets/img/about-hero.webp');
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  z-index: 1;
-}
+  .about-hero {
+    position: relative;
+    height: 350px;
+    padding-top: 30px;
+    background-image: url('/assets/img/about-hero-2.webp');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+  }
 
-.about-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
 
-.about-content h2{
+  .about-content h2 {
     text-align: center;
     color: #fff;
-    margin-top: 100px;
+    margin-top: 150px;
     font-size: 40px;
-}
+  }
 
-.about {
+  .about {
     display: flex;
     width: 100%;
     margin-top: 40px;
-}
-.about-img {
+  }
+
+  .about-img {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.about-img img {
+  }
+
+  .about-img img {
     width: 80%;
     height: 100%;
-}
-.about-right {
+  }
+
+  .about-right {
     width: 60%;
-}
-.about-right h2 {
+  }
+
+  .about-right h2 {
     margin-bottom: 20px;
-}
-.about-right p {
+  }
+
+  .about-right p {
     margin-bottom: 20px;
     color: #828282;
     font-size: 18px;
     line-height: 30px;
-}
-.about-cards {
+  }
+
+  .about-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 40px;
-}
-.about-card {
+  }
+
+  .about-card {
     width: 49%;
     display: flex;
     gap: 20px;
@@ -86,220 +94,311 @@
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 20px;
-}
-.about-card-left {
+  }
+
+  .about-card-left {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.about-card-left i{
+  }
+
+  .about-card-left i {
     font-size: 40px;
     color: #D25D5D;
-}
-.about-card-right h3 {
+  }
+
+  .about-card-right h3 {
     font-size: 20px;
-}
-.about-card-right p {
+  }
+
+  .about-card-right p {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 0;
-}
+  }
+
+
+  .feature {
+    margin-top: 0;
+    padding-top: 30px !important;
+  }
+
+
+  @media (max-width: 1000px) {
+
+    .about-section .container {
+      margin: auto;
+      max-width: 840px;
+    }
+
+    .about-hero {
+      height: 300px;
+      padding-top: 20px;
+    }
+
+    .about-content h2 {
+      margin-top: 150px;
+      font-size: 34px;
+    }
+
+    .about {
+      margin-top: 30px;
+    }
+
+    .about-img {
+      display: none;
+    }
+
+    .about-right {
+      width: 100%;
+    }
+
+    .about-right h2 {
+      text-align: center;
+    }
+
+    .about-right p {
+      text-align: center;
+      font-size: 16px;
+      /* width: 100%; */
+      line-height: 24px;
+    }
+
+
+    .about-card-right p {
+      text-align: left;
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .about-section .container {
+      max-width: 96%;
+    }
+
+    .about-hero {
+      height: 200px;
+    }
+
+    .about-content h2 {
+      margin-top: 90px;
+      font-size: 30px;
+    }
+
+    .about {
+      margin-top: 20px;
+    }
+
+
+    .about-card {
+      width: 100%;
+    }
+
+
+  }
 </style>
 
 <body>
 
   <section class="about-hero">
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top mt-4">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
-            <img src="/assets/img/logo.png" alt="logo">
+          <img src="/assets/img/logo.png" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
           <ul class="navbar-nav mb-2 mb-lg-0 me-3">
-            <li class="nav-item"><a class="nav-link" href="#">Who We Are</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">What We Do</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Get Involved</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">News & Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="news-listing.html">News & Events</a></li>
           </ul>
-          <form class="d-flex me-3">
-            <div class="input-group">
-              <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
-              <input class="form-control" type="search" placeholder="Search Anything" aria-label="Search">
-            </div>
-          </form>
-          <button class="nav-btn"><i class="bi bi-piggy-bank-fill"></i>Donate</button>
+          <a href="donate.html" class="nav-btn"><i class="bi bi-piggy-bank-fill"></i>Donate</a>
         </div>
       </div>
     </nav>
 
     <div class="about-content">
-        <h2>About Us</h2>
+      <h2>About Us</h2>
     </div>
 
   </section>
 
-  <section>
-      <div class="container">
-        <div class="about">
-            <div class="about-img">
-                <img src="/assets/img/about.webp" alt="">
-            </div>
-            <div class="about-right">
-                <h2>Our Purpose & People</h2>
-                <p>In a world driven by the urgent need for environmental preservation, The Nature
-                Foundation is a leading non-profit organization with a mission to create, fund and
-                promote nature conservation projects from a local to global scale. Helping both people
-                and wildlife thru biodiversity and climate efforts, we aim to support projects in vital areas
-                such as ocean & river pollution cleanup, reef restoration, land conservation, reforestation
-                and carbon reduction. </p>
-                <div class="about-cards">
-                    <div class="about-card">
-                        <div class="about-card-left">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-                        <div class="about-card-right">
-                            <h3>Value</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-left">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-                        <div class="about-card-right">
-                            <h3>Value</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-left">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-                        <div class="about-card-right">
-                            <h3>Value</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-left">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-                        <div class="about-card-right">
-                            <h3>Value</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="about-section">
+    <div class="container">
+      <div class="about">
+        <div class="about-img">
+          <img src="/assets/img/about.webp" alt="">
         </div>
+        <div class="about-right">
+          <h2>Our Purpose & People</h2>
+          <p>In a world driven by the urgent need for environmental preservation, The Nature
+            Foundation is a leading non-profit organization with a mission to create, fund and
+            promote nature conservation projects from a local to global scale. Helping both people
+            and wildlife thru biodiversity and climate efforts, we aim to support projects in vital areas
+            such as ocean & river pollution cleanup, reef restoration, land conservation, reforestation
+            and carbon reduction. </p>
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="about-card-left">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div class="about-card-right">
+                <h3>Value</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-left">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div class="about-card-right">
+                <h3>Value</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-left">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div class="about-card-right">
+                <h3>Value</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-left">
+                <i class="bi bi-globe2"></i>
+              </div>
+              <div class="about-card-right">
+                <h3>Value</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, perspiciatis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div class="donate-button-section">
+      <div class="container">
+        <h3>Together, We Can Heal the Earth</h3>
+        <p>Join our mission to protect the planet for future generations. Your generosity fuels our impact.</p>
+        <a href="donate.html" class="nav-btn"><i class="bi bi-piggy-bank-fill"></i>Donate Now</a>
+      </div>
+    </div>
 
     <div class="feature" style="background: #f6f1f1; padding-top: 20px; padding-bottom: 20px;">
-        <div class="container">
-            <h2>We unite passionate individuals, reliable science, and essential resources to safeguard nature’s most fragile places</h2>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="card-left">
-                        <img src="/assets/img/card-1.png" alt="">
-                    </div>
-                    <div class="card-right">
-                        <h3>Our Contribution</h3>
-                        <p>We safeguard landscapes and wildlife through conservation, restoration, and long-term protection.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="card-left">
-                        <img src="/assets/img/card-2.png" alt="">
-                    </div>
-                    <div class="card-right">
-                        <h3>Nature & Knowledge</h3>
-                        <p>We rely on evidence-based science to help protect and manage natural ecosystems effectively.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="card-left">
-                        <img src="/assets/img/card-3.png" alt="">
-                    </div>
-                    <div class="card-right">
-                        <h3>Eco Services & Solutions</h3>
-                        <p>For over four decades, we’ve delivered trusted conservation solutions to support nature and local communities.</p>
-                    </div>
-                </div>
-                <div class="feature-card">
-                    <div class="card-left">
-                        <img src="/assets/img/card-4.png" alt="">
-                    </div>
-                    <div class="card-right">
-                        <h3>Nature & Community</h3>
-                        <p>Through education and participation, we encourage lasting connections between people and nature.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2>We unite passionate individuals, reliable science, and essential resources to safeguard nature’s most
+          fragile places</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="card-left">
+              <img src="/assets/img/card-1.png" alt="">
             </div>
+            <div class="card-right">
+              <h3>Our Contribution</h3>
+              <p>We safeguard landscapes and wildlife through conservation, restoration, and long-term protection.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="card-left">
+              <img src="/assets/img/card-2.png" alt="">
+            </div>
+            <div class="card-right">
+              <h3>Nature & Knowledge</h3>
+              <p>We rely on evidence-based science to help protect and manage natural ecosystems effectively.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="card-left">
+              <img src="/assets/img/card-3.png" alt="">
+            </div>
+            <div class="card-right">
+              <h3>Eco Services & Solutions</h3>
+              <p>For over four decades, we’ve delivered trusted conservation solutions to support nature and local
+                communities.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="card-left">
+              <img src="/assets/img/card-4.png" alt="">
+            </div>
+            <div class="card-right">
+              <h3>Nature & Community</h3>
+              <p>Through education and participation, we encourage lasting connections between people and nature.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
   </section>
 
 
 
- <footer class="pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4 footer-about">
-        <img src="/assets/img/logo.png" alt="Logo" class="mb-3 logo">
-        <div class="footer-contact">
-          <div>
-            <i class="bi bi-telephone-fill"></i>
-            +91 9876543210
-          </div>
-          <div>
-            <i class="bi bi-envelope-fill"></i>
-            info@anything.com
-          </div>
-          <div class="address">
-            <i class="bi bi-geo-alt-fill"></i>
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 footer-about">
+          <img src="/assets/img/logo.png" alt="Logo" class="mb-3 logo">
+          <div class="footer-contact">
             <div>
-              Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore 560016
+              <i class="bi bi-telephone-fill"></i>
+              +91 9876543210
+            </div>
+            <div>
+              <i class="bi bi-envelope-fill"></i>
+              info@anything.com
+            </div>
+            <div class="address">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                Akshya Nagar 1st Block 1st Cross, Rammurthy nagar, Bangalore 560016
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="col-md-4 mid-footer">
-        <div class="contact-social">
-          <h5>Follow Us</h5>
-          <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+
+        <div class="col-md-4 mid-footer">
+          <div class="contact-social">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+          </div>
+          <p>Nature Website is committed to conserving, restoring, and protecting the environment for future
+            generations. Nature Website is committed to conserving, restoring, and protecting the environment for future
+            generations.</p>
         </div>
-        <p>Nature Website is committed to conserving, restoring, and protecting the environment for future generations. Nature Website is committed to conserving, restoring, and protecting the environment for future generations.</p>
-      </div>
 
-      <div class="col-md-4 end-footer">
-        <div>
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
-            <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
-            <li><a href="#" class="text-light text-decoration-none">News & Events</a></li>
-            <li><a href="privacy-policy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
-            <li><a href="terms-condition.html" class="text-light text-decoration-none">Terms & Conditions</a></li>
-          </ul>
+        <div class="col-md-4 end-footer">
+          <div>
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+              <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+              <li><a href="news-listing.html" class="text-light text-decoration-none">News & Events</a></li>
+              <li><a href="privacy-policy.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+              <li><a href="terms-condition.html" class="text-light text-decoration-none">Terms & Conditions</a></li>
+            </ul>
+          </div>
         </div>
+
       </div>
 
+      <div class="text-center border-top pt-3">
+        <p class="mb-0">&copy; 2025 Nature Website. All rights reserved.</p>
+      </div>
     </div>
-
-    <div class="text-center border-top pt-3">
-      <p class="mb-0">&copy; 2025 Nature Website. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
 
@@ -308,4 +407,5 @@
 
 
 </body>
+
 </html>
